@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import ButtonComponent from './components/ButtonComponent.vue'
-import BackgroundComponent from './components/BackgroundComponent.vue'
-import YamlContent from './config.yml';
+import ButtonComponent from '../components/ButtonComponent.vue'
+import BackgroundComponent from '../components/BackgroundComponent.vue'
+import YamlContent from '../assets/defaults.yml';
 </script>
 
 <template>

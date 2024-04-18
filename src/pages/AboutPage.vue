@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import BackgroundComponent from './components/BackgroundComponent.vue'
 
 const router = useRouter()
 const route = useRoute()

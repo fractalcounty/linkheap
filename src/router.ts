@@ -1,11 +1,11 @@
 import { createMemoryHistory, createRouter } from 'vue-router'
 
-import LinkView from './LinkView.vue'
-import AboutView from './AboutView.vue'
+import LinkPage from './pages/LinkPage.vue'
+import AboutPage from './pages/AboutPage.vue'
 
 const routes = [
-  { path: '/', component: LinkView },
-  { path: '/about', component: AboutView },
+  { path: '/', component: LinkPage },
+  { path: '/about', component: AboutPage },
 ]
 
 const router = createRouter({

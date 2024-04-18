@@ -1,4 +1,4 @@
-@import '../public/webfonts.css';
+@import './webfonts/webfonts.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
