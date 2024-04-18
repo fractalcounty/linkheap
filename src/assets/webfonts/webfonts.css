@@ -1,13 +1,17 @@
 @font-face {
     font-family: 'Alte Haas Grotesk';
-    src: url('/AlteHaasGroteskBold.woff2') format('woff2');
+    src:
+        local('Alte Haas Grotesk Bold'),
+        url(AlteHaasGroteskBold.woff2) format('woff2');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Alte Haas Grotesk';
-    src: url('/AlteHaasGroteskRegular.woff2') format('woff2');
+    src:
+        local('Alte Haas Grotesk Regular'),
+        url(AlteHaasGroteskRegular.woff2) format('woff2');
     font-weight: normal;
     font-style: normal;
 }
