@@ -35,8 +35,8 @@ COPY --from=build-stage /app/dist/assets /www/default-assets
 # USER ${UID}:${GID}
 
 HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
-    CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:${PORT}/ || exit 1
+    CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:8080/ || exit 1
 
-EXPOSE ${PORT}
+EXPOSE 8080
 
 ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
