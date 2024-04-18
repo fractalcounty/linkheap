@@ -78,7 +78,67 @@ function removeExistingStars() {
 
 <style>
 :root {
-  --stars: rgba(90, 90, 90, 0.063);
+  --stars: rgba(176, 176, 176, 0.099);
+}
+
+.gradient-overlay {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  pointer-events: none;
+}
+
+#noise-bg {
+	position: fixed;
+	top: -50%;
+	left: -50%;
+	right: -50%;
+	bottom: -50%;
+	width: 400%;
+	height: 400vh;
+	background: transparent
+		url("https://portfolio-v4-abjt14.vercel.app/assets/images/noise/noise.png")
+		repeat 0 0;
+	background-repeat: repeat;
+	animation: 1000ms infinite noise;
+	pointer-events: none;
+	opacity: 0.8;
+}
+
+@keyframes noise {
+	0%,
+	100% {
+		background-position: 0 0;
+	}
+	10% {
+		background-position: -5% -10%;
+	}
+	20% {
+		background-position: -15% 5%;
+	}
+	30% {
+		background-position: 7% -25%;
+	}
+	40% {
+		background-position: 20% 25%;
+	}
+	50% {
+		background-position: -25% 10%;
+	}
+	60% {
+		background-position: 15% 5%;
+	}
+	70% {
+		background-position: 0 15%;
+	}
+	80% {
+		background-position: 25% 35%;
+	}
+	90% {
+		background-position: -10% 10%;
+	}
 }
 
 /* --- Star Background ------------------------------------------------ */
@@ -86,10 +146,10 @@ function removeExistingStars() {
 @keyframes pulse {
   0%,
   100% {
-    opacity: 0.2;
+    opacity: 0.23;
   }
   50% {
-    opacity: 0.0;
+    opacity: 0.05;
   }
 }
 
@@ -97,7 +157,7 @@ function removeExistingStars() {
   position: absolute;
   width: 1px;
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.719);
+  background-color: rgba(255, 255, 255, 0.805);
   box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.278) !important;
   opacity: 0;
   transition: opacity 0.5s;
