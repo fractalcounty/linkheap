@@ -14,29 +14,29 @@ FROM alpine:3.19
 
 ENV GID 1000
 ENV UID 1000
-ENV PORT 8080
+ENV PORT 80
 ENV SUBFOLDER "/_"
 ENV INIT_ASSETS 1
 ENV IPV6_DISABLE 0
 
-# RUN addgroup -S lighttpd -g ${GID} && adduser -D -S -u ${UID} lighttpd lighttpd && \
-#     apk add -U --no-cache lighttpd
+RUN addgroup -S lighttpd -g ${GID} && adduser -D -S -u ${UID} lighttpd lighttpd && \
+    apk add -U --no-cache lighttpd
 
 WORKDIR /www
 
-# COPY lighttpd.conf /lighttpd.conf
-# COPY lighttpd-ipv6.sh /etc/lighttpd/ipv6.sh
+COPY lighttpd.conf /lighttpd.conf
+COPY lighttpd-ipv6.sh /etc/lighttpd/ipv6.sh
 COPY entrypoint.sh /entrypoint.sh
-# COPY --from=build-stage --chown=${UID}:${GID} /app/dist /www/
-# COPY --from=build-stage --chown=${UID}:${GID} /app/dist/assets /www/default-assets
-COPY --from=build-stage /app/dist /www/
-COPY --from=build-stage /app/dist/assets /www/default-assets
+COPY --from=build-stage --chown=${UID}:${GID} /app/dist /www/
+COPY --from=build-stage --chown=${UID}:${GID} /app/dist/assets /www/default-assets
+# COPY --from=build-stage /app/dist /www/
+# COPY --from=build-stage /app/dist/assets /www/default-assets
 
-# USER ${UID}:${GID}
+USER ${UID}:${GID}
 
 HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
-    CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:8080/ || exit 1
+    CMD wget --no-verbose --tries=1 --spider http://127.0.0.1:80/ || exit 1
 
-EXPOSE 8080
+EXPOSE 80
 
 ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
