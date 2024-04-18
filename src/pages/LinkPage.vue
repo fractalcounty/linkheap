@@ -6,9 +6,9 @@ import YamlContent from '../assets/defaults.yml';
 
 <template>
   <BackgroundComponent />
-  <div class="min-h-screen bg-base-300 text-base-content flex flex-col items-center justify-center">
-    <h1 class="text-3xl font-bold mb-0 animate-wiggle1">FRACTAL COUNTY</h1>
-    <h2 class="text-xl  mb-8 animate-wiggle2">LINK DIRECTORY</h2>
+  <div class="min-h-screen bg-base-300 flex flex-col items-center justify-center">
+    <h1 class="text-3xl font-bold text-center leading-6 animate-wiggle1">FRACTAL COUNTY</h1>
+    <h2 class="text-2xl mb-8 leading-12 text-center animate-wiggle2">LINK DIRECTORY</h2>
     <div class="flex flex-col gap-4">
       <ButtonComponent v-for="link in YamlContent.links" :key="link.name" 
                        :name="link.name" :url="link.url" />
