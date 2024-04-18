@@ -8,7 +8,7 @@ import YamlContent from '../assets/defaults.yml';
   <BackgroundComponent />
   <div class="min-h-screen bg-base-300 flex flex-col items-center justify-center">
     <h1 class="text-3xl font-bold text-center leading-6 animate-wiggle1">FRACTAL COUNTY</h1>
-    <h2 class="text-2xl mb-8 leading-12 text-center animate-wiggle2">LINK DIRECTORY</h2>
+    <h2 class="text-1xl mb-8 leading-10 text-center animate-wiggle2">Link Directory</h2>
     <div class="flex flex-col gap-4">
       <ButtonComponent v-for="link in YamlContent.links" :key="link.name" 
                        :name="link.name" :url="link.url" />
@@ -17,12 +17,16 @@ import YamlContent from '../assets/defaults.yml';
 </template>
 
 <style scoped>
+.text-1xl {  /* Or whatever class you used for the title */
+  text-transform: uppercase; 
+}
+
 @keyframes wiggle1 {
   0% { 
     transform: translateY(0) rotate(-0.3deg) scale(1.1); 
   }
   50% { 
-    transform: translateY(-1px) rotate(-0.5deg) scale(1.115); 
+    transform: translateY(-1px) rotate(-0.5deg) scale(1.13); 
   }
   100% { 
     transform: translateY(0) rotate(0deg) scale(1.1);  
@@ -34,7 +38,7 @@ import YamlContent from '../assets/defaults.yml';
     transform: translateY(1.0px) rotate(0.4deg) scale(1.01); 
   }
   50% { 
-    transform: translateY(0) rotate(-0.1deg) scale(1.0); 
+    transform: translateY(0) rotate(-0.1deg) scale(0.99); 
   }
   100% { 
     transform: translateY(-0.8px) rotate(0deg) scale(1.008);  

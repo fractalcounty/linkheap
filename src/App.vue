@@ -1,5 +1,6 @@
 <template>
   <main> 
+	<title>FRACTALCOUNTY - Links</title>
     <RouterView />
     <div id="noise-bg"></div>
     <div class="gradient-overlay"></div> 
