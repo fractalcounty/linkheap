@@ -10,8 +10,8 @@ import YamlContent from './assets/defaults.yml';
     </header>
   <main class="min-h-screen">
     <section class="content-container flex flex-col items-center justify-center">
-      <h1 class="text-6xl md:text-5xl font-bold text-center leading-[3rem] mb-3 animate-wiggle1 drop-shadow-glow">FRACTAL COUNTY</h1>
-      <h2 class="text-3xl md:text-3xl mt-0 mb-16 leading-2 text-center animate-wiggle2 drop-shadow-glow">Link Directory</h2>
+      <h1 class="text-5xl md:text-5xl font-bold text-center leading-[3rem] mb-3 animate-wiggle1 drop-shadow-glow">FRACTAL COUNTY</h1>
+      <h2 class="text-2xl md:text-3xl mt-0 mb-16 leading-2 text-center animate-wiggle2 drop-shadow-glow">Link Directory</h2>
       <div class="button-list inline-flex flex-col">
         <ButtonComponent v-for="link in YamlContent.links" :key="link.name" 
             :name="link.name" :url="link.url" />
