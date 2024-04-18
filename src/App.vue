@@ -27,13 +27,18 @@ import YamlContent from './assets/defaults.yml';
 
 <style>
 main {
-  transform: translateY(-50px);
   z-index: 5;
   min-height: 100vh;        /* Ensure 'main' takes up full viewport height */
   display: flex;            /* Activate flexbox */
   flex-direction: column;   /* Align items vertically */
   align-items: center;      /* Horizontal centering */
   justify-content: center;  /* Vertical centering */
+}
+
+@media (max-width: 768px) {
+  main {
+    transform: translateY(-85px);
+  }
 }
 
 body {
