@@ -35,12 +35,6 @@ main {
   justify-content: center;  /* Vertical centering */
 }
 
-@media (max-width: 768px) {
-  main {
-    transform: translateY(-85px);
-  }
-}
-
 body {
   margin: 0;
   font-family: 'Alte Haas Grotesk', sans-serif; /* Specify your font */
