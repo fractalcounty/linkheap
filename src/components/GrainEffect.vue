@@ -5,7 +5,7 @@
 <style>
 #grain-overlay {
 	animation: grain 1s steps(1) infinite;
-	background-image: url("public/assets/grain.webp");
+	background-image: url("/assets/grain.webp");
 	width: 200%;
 	height: 200vh;
 	top: -50%;
