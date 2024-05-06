@@ -7,9 +7,9 @@ import YamlContent from './assets/defaults.yml';
 <template>
   <header>
     <title>FRACTALCOUNTY - Links</title>
-    </header>
-  <main class="min-h-screen">
-    <section class="content-container flex flex-col items-center justify-center">
+  </header>
+  <main class="main">
+    <section class="content-container flex flex-col items-center justify-center safe-area">
       <h1 class="text-5xl md:text-5xl font-bold text-center leading-[3rem] mb-3 animate-wiggle1 drop-shadow-glow">FRACTAL COUNTY</h1>
       <h2 class="text-2xl md:text-3xl mt-0 mb-16 leading-2 text-center animate-wiggle2 drop-shadow-glow">Link Directory</h2>
       <div class="button-list inline-flex flex-col">
@@ -19,26 +19,49 @@ import YamlContent from './assets/defaults.yml';
     </section>
     <EffectsComponent /> 
   </main>
-    <div class="backgrounds">
-      <div id="noise-bg" class="z-20"></div>
-      <div class="gradient-overlay bg-gradient-to-t from-stone-900 from-5% via-stone-900 via-5% to-neutral-950 z-10 opacity-500 "></div>
-    </div>
+  <div class="backgrounds">
+    <div id="noise-bg" class="z-20"></div>
+    <div class="gradient-overlay bg-gradient-to-t from-stone-900 from-5% via-stone-900 via-5% to-neutral-950 z-10 opacity-500"></div>
+  </div>
 </template>
 
 <style>
-main {
-  z-index: 5;
-  min-height: 100vh;        /* Ensure 'main' takes up full viewport height */
-  display: flex;            /* Activate flexbox */
-  flex-direction: column;   /* Align items vertically */
-  align-items: center;      /* Horizontal centering */
-  justify-content: center;  /* Vertical centering */
+html, body {
+  width: 100%;
+  height: 100%;  /* Core full height */
+  overflow: hidden;  /* Removes scrollability */
+  margin: 0;
+  padding: 0;
+  font-family: 'Alte Haas Grotesk', sans-serif;
+  text-transform: uppercase;
 }
 
-body {
-  margin: 0;
-  font-family: 'Alte Haas Grotesk', sans-serif; /* Specify your font */
-  text-transform: uppercase; 
+.main {
+  z-index: 5;
+  height: 100svh;  /* Using small viewport height to account for mobile UI */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: env(safe-area-inset-top, 20px);  /* Considers top bar adjustment */
+  padding-bottom: env(safe-area-inset-bottom, 20px);  /* Considers bottom bar adjustment */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.37); /* Dark overlay color */
+  opacity: 1.0; /* Full opacity for foreground content */
+}
+
+.content-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .backgrounds {
@@ -48,25 +71,9 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* Prevent scrollbars if backgrounds exceed viewport */
-  pointer-events: none; /* Allow mouse events to pass through */
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  height: 100%; 
-  background-color: rgba(0, 0, 0, 0.37); /* Or your desired dark color */
-  opacity: 1.0; /* Adjust opacity between 0 and 1 */
-}
-
-.content-container {
-  max-width: 800px; /* Adjust as needed */
-  margin: 0 auto;
-  padding: 2rem;  /* Or your preferred spacing */
+  overflow: hidden;
+  pointer-events: none;
+  background-color: #000;
 }
 
 @keyframes wiggle1 {
