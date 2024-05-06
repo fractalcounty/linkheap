@@ -10,8 +10,8 @@ import YamlContent from './assets/defaults.yml';
   </header>
   <main class="main">
     <section class="content-container flex flex-col items-center justify-center safe-area">
-      <h1 class="text-5xl md:text-5xl font-bold text-center leading-[3rem] mb-3 animate-wiggle1 drop-shadow-glow">FRACTAL COUNTY</h1>
-      <h2 class="text-2xl md:text-3xl mt-0 mb-16 leading-2 text-center animate-wiggle2 drop-shadow-glow">Link Directory</h2>
+      <h1 class="text-6xl md:text-5xl lg:text-5xl font-bold text-center leading-[3rem] mb-3 animate-wiggle1 drop-shadow-glow">FRACTAL COUNTY</h1>
+      <h2 class="text-2xl md:text-3xl lg:text-3xl mt-0 mb-16 leading-2 text-center animate-wiggle2 drop-shadow-glow">Link Directory</h2>
       <div class="button-list inline-flex flex-col">
         <ButtonComponent v-for="link in YamlContent.links" :key="link.name" 
             :name="link.name" :url="link.url" />
@@ -78,25 +78,25 @@ html, body {
 
 @keyframes wiggle1 {
   0% { 
-    transform: translateY(0) rotate(-0.3deg) scale(1.1); 
+    transform: translateY(-1px) rotate(-0.4deg) scale(1.1); 
   }
   50% { 
-    transform: translateY(-1px) rotate(-0.5deg) scale(1.13); 
+    transform: translateY(-1px) rotate(0deg) scale(1.13); 
   }
   100% { 
-    transform: translateY(0) rotate(0deg) scale(1.1);  
+    transform: translateY(0) rotate(0.8deg) scale(1.1);  
   } 
 }
 
 @keyframes wiggle2 {
   0% { 
-    transform: translateY(1.0px) rotate(0.4deg) scale(1.01); 
+    transform: translateY(1.0px) rotate(0.6deg) scale(0.98); 
   }
   50% { 
-    transform: translateY(0) rotate(-0.1deg) scale(0.99); 
+    transform: translateY(0.8px) rotate(-0.4deg) scale(0.95); 
   }
   100% { 
-    transform: translateY(-0.8px) rotate(0deg) scale(1.008);  
+    transform: translateY(-0.8px) rotate(0deg) scale(0.98);  
   } 
 }
 
