@@ -1,10 +1,43 @@
 <script setup lang="ts">
-import ButtonComponent from './components/ButtonComponent.vue'
-import GrainEffect from './components/GrainEffect.vue'
+import ButtonComponent from './components/ButtonComponent.vue';
+import GrainEffect from './components/GrainEffect.vue';
 import YamlContent from './assets/defaults.yml';
+import { Head } from '@unhead/vue/components'
 </script>
 
 <template>
+  <Head>
+    <meta charset="UTF-8">
+    <link rel="canonical" href="https://fractalcounty.com">
+    <title>FRACTALCOUNTY - Links</title>
+    <meta name="description" content="A convienent directory containing links to FRACTALCOUNTY's social media profiles and other relevant accounts across the internet.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@fractalcounty">
+    <meta name="twitter:title" content="FRACTALCOUNTY - Links">
+    <meta name="twitter:description" content="A convienent directory containing links to FRACTALCOUNTY's social media profiles and other relevant accounts across the internet.">
+    <meta name="twitter:image" content="https://i.ibb.co/7W7CP2D/dog.png">    
+    <meta property="og:title" content="FRACTALCOUNTY - Links">
+    <meta property="og:image" content="https://i.ibb.co/7W7CP2D/dog.png" />
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="450">
+    <meta property="og:description" content="A convienent directory containing links to FRACTALCOUNTY's social media profiles and other relevant accounts across the internet.">
+  </Head>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="canonical" href="https://fractalcounty.com">
+    <title>FRACTALCOUNTY - Links</title>
+    <meta name="description" content="A convienent directory containing links to FRACTALCOUNTY's social media profiles and other relevant accounts across the internet.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@fractalcounty">
+    <meta name="twitter:title" content="FRACTALCOUNTY - Links">
+    <meta name="twitter:description" content="A convienent directory containing links to FRACTALCOUNTY's social media profiles and other relevant accounts across the internet.">
+    <meta name="twitter:image" content="https://i.ibb.co/7W7CP2D/dog.png">    
+    <meta property="og:title" content="FRACTALCOUNTY - Links">
+    <meta property="og:image" content="https://i.ibb.co/7W7CP2D/dog.png" />
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="450">
+    <meta property="og:description" content="A convienent directory containing links to FRACTALCOUNTY's social media profiles and other relevant accounts across the internet.">
+  </head>
   <header>
     <title>FRACTALCOUNTY - Links</title>
     <GrainEffect /> 

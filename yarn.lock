@@ -1499,6 +1499,39 @@
     "@typescript-eslint/types" "7.7.0"
     eslint-visitor-keys "^3.4.3"
 
+"@unhead/dom@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.yarnpkg.com/@unhead/dom/-/dom-1.9.10.tgz#f3e745e9ad3eef69bd714e9c9a903e977f472434"
+  integrity sha512-F4sBrmd8kG8MEqcVTGL0Y6tXbJMdWK724pznUzefpZTs1GaVypFikLluaLt4EnICcVhOBSe4TkGrc8N21IJJzQ==
+  dependencies:
+    "@unhead/schema" "1.9.10"
+    "@unhead/shared" "1.9.10"
+
+"@unhead/schema@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.yarnpkg.com/@unhead/schema/-/schema-1.9.10.tgz#cef60532b8f971142b7aff8237ae7c18439ad9c3"
+  integrity sha512-3ROh0doKfA7cIcU0zmjYVvNOiJuxSOcjInL+7iOFIxQovEWr1PcDnrnbEWGJsXrLA8eqjrjmhuDqAr3JbMGsLg==
+  dependencies:
+    hookable "^5.5.3"
+    zhead "^2.2.4"
+
+"@unhead/shared@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.yarnpkg.com/@unhead/shared/-/shared-1.9.10.tgz#79d916c03b1567856a75b30e5594f7b5fab95d3f"
+  integrity sha512-LBXxm/8ahY4FZ0FbWVaM1ANFO5QpPzvaYwjAQhgHANsrqFP2EqoGcOv1CfhdQbxg8vpGXkjI7m0r/8E9d3JoDA==
+  dependencies:
+    "@unhead/schema" "1.9.10"
+
+"@unhead/vue@^1.9.10":
+  version "1.9.10"
+  resolved "https://registry.yarnpkg.com/@unhead/vue/-/vue-1.9.10.tgz#098aa77bda1c32a4ca7f8c9e4bf28f608e10b35e"
+  integrity sha512-Zi65eTU5IIaqqXAVOVJ4fnwJRR751FZIFlzYOjIekf1eNkISy+A4xyz3NIEQWSlXCrOiDNgDhT0YgKUcx5FfHQ==
+  dependencies:
+    "@unhead/schema" "1.9.10"
+    "@unhead/shared" "1.9.10"
+    hookable "^5.5.3"
+    unhead "1.9.10"
+
 "@vitejs/plugin-vue@^5.0.4":
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-5.0.4.tgz#508d6a0f2440f86945835d903fcc0d95d1bb8a37"
@@ -2703,6 +2736,11 @@ he@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
+
+hookable@^5.5.3:
+  version "5.5.3"
+  resolved "https://registry.yarnpkg.com/hookable/-/hookable-5.5.3.tgz#6cfc358984a1ef991e2518cb9ed4a778bbd3215d"
+  integrity sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ==
 
 idb@^7.0.1:
   version "7.1.1"
@@ -4054,6 +4092,16 @@ undici-types@~5.26.4:
   resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-5.26.5.tgz#bcd539893d00b56e964fd2657a4866b221a65617"
   integrity sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==
 
+unhead@1.9.10, unhead@^1.9.10:
+  version "1.9.10"
+  resolved "https://registry.yarnpkg.com/unhead/-/unhead-1.9.10.tgz#8cb531e7d0d2989374ad93881ffb39f628e2b6f8"
+  integrity sha512-Y3w+j1x1YFig2YuE+W2sER+SciRR7MQktYRHNqvZJ0iUNCCJTS8Z/SdSMUEeuFV28daXeASlR3fy7Ry3O2indg==
+  dependencies:
+    "@unhead/dom" "1.9.10"
+    "@unhead/schema" "1.9.10"
+    "@unhead/shared" "1.9.10"
+    hookable "^5.5.3"
+
 unicode-canonical-property-names-ecmascript@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/unicode-canonical-property-names-ecmascript/-/unicode-canonical-property-names-ecmascript-2.0.0.tgz#301acdc525631670d39f6146e0e77ff6bbdebddc"
@@ -4425,3 +4473,8 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+zhead@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/zhead/-/zhead-2.2.4.tgz#87cd1e2c3d2f465fa9f43b8db23f9716dfe6bed7"
+  integrity sha512-8F0OI5dpWIA5IGG5NHUg9staDwz/ZPxZtvGVf01j7vHqSyZ0raHY+78atOVxRqb73AotX22uV1pXt3gYSstGag==
