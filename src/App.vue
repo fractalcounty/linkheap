@@ -45,13 +45,13 @@ html, body {
 
 .main {
   z-index: 5;
-  height: 100svh;  /* Using small viewport height to account for mobile UI */
+  height: 100vh;  /* Using small viewport height to account for mobile UI */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: env(safe-area-inset-top, 20px);  /* Considers top bar adjustment */
-  padding-bottom: env(safe-area-inset-bottom, 20px);  /* Considers bottom bar adjustment */
+  padding-top: env(safe-area-inset-top, 40px);  /* Considers top bar adjustment */
+  padding-bottom: env(safe-area-inset-bottom, 40px);  /* Considers bottom bar adjustment */
 }
 
 .bg {
