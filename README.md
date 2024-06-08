@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" width="500px" srcset="https://raw.githubusercontent.com/fractalcounty/linkheap/main/resources/logo-dark.svg">
-    <img width="500px" src="https://raw.githubusercontent.com/fractalcounty/linkheap/main/resources/logo-light.svg">
+    <source media="(prefers-color-scheme: dark)" width="500px" srcset="https://raw.githubusercontent.com/fractalcounty/linkheap/main/docs/logo-dark.svg">
+    <img width="500px" src="https://raw.githubusercontent.com/fractalcounty/linkheap/main/docs/logo-light.svg">
   </picture>
 </p>
 
@@ -24,7 +24,7 @@ A live preview is available on [my personal website](https://fractalcounty.com/l
 ## Preview
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/fractalcounty/linkheap/main/resources/preview.gif"><br>
+  <img src="https://raw.githubusercontent.com/fractalcounty/linkheap/main/docs/preview.gif"><br>
 </p>
 
 ## Built using
