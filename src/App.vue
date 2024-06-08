@@ -10,7 +10,7 @@ import YamlContent from './assets/defaults.yml';
     <title>FRACTALCOUNTY - Links</title>
     <GrainEffect /> 
   </header>
-  <main class="main p-12">
+  <main class="main">
     <section class="content-container flex flex-col items-center justify-center safe-area space-y-16">
       <div class="header-container space-y-2">
         <h1 class="text-6xl font-bold text-center drop-shadow-glow">
