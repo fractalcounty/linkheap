@@ -115,6 +115,6 @@ html, body {
 }
 
 .animate-subtitle {
-  animation: wiggle-subtitle 5s ease-in-out infinite;
+  animation: wiggle-subtitle 4s ease-in-out infinite;
 }
 </style>
