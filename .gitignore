@@ -19,8 +19,9 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+.prettierrc
+eslint.config.js
 
 # App configuration
 config.yml
-
 .drone.yml

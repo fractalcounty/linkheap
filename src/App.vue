@@ -1,64 +1,36 @@
 <script setup lang="ts">
 import ButtonComponent from './components/ButtonComponent.vue';
+import IconComponent from './components/IconComponent.vue';
 import GrainEffect from './components/GrainEffect.vue';
 import YamlContent from './assets/defaults.yml';
-import { Head } from '@unhead/vue/components'
 </script>
 
 <template>
-  <Head>
-    <meta charset="UTF-8">
-    <link rel="canonical" href="https://fractalcounty.com">
-    <title>FRACTALCOUNTY - Links</title>
-    <meta name="description" content="A convienent directory containing links to FRACTALCOUNTY's social media profiles and other relevant accounts across the internet.">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@fractalcounty">
-    <meta name="twitter:title" content="FRACTALCOUNTY - Links">
-    <meta name="twitter:description" content="A convienent directory containing links to FRACTALCOUNTY's social media profiles and other relevant accounts across the internet.">
-    <meta name="twitter:image" content="https://i.ibb.co/7W7CP2D/dog.png">    
-    <meta property="og:title" content="FRACTALCOUNTY - Links">
-    <meta property="og:image" content="https://i.ibb.co/7W7CP2D/dog.png" />
-    <meta property="og:image:width" content="800">
-    <meta property="og:image:height" content="450">
-    <meta property="og:description" content="A convienent directory containing links to FRACTALCOUNTY's social media profiles and other relevant accounts across the internet.">
-  </Head>
-  <head>
-    <meta charset="UTF-8">
-    <link rel="canonical" href="https://fractalcounty.com">
-    <title>FRACTALCOUNTY - Links</title>
-    <meta name="description" content="A convienent directory containing links to FRACTALCOUNTY's social media profiles and other relevant accounts across the internet.">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@fractalcounty">
-    <meta name="twitter:title" content="FRACTALCOUNTY - Links">
-    <meta name="twitter:description" content="A convienent directory containing links to FRACTALCOUNTY's social media profiles and other relevant accounts across the internet.">
-    <meta name="twitter:image" content="https://i.ibb.co/7W7CP2D/dog.png">    
-    <meta property="og:title" content="FRACTALCOUNTY - Links">
-    <meta property="og:image" content="https://i.ibb.co/7W7CP2D/dog.png" />
-    <meta property="og:image:width" content="800">
-    <meta property="og:image:height" content="450">
-    <meta property="og:description" content="A convienent directory containing links to FRACTALCOUNTY's social media profiles and other relevant accounts across the internet.">
-  </head>
   <header>
     <title>FRACTALCOUNTY - Links</title>
     <GrainEffect /> 
   </header>
-  <main class="main">
-    
-    <section class="content-container flex flex-col items-center justify-center safe-area">
-      <h1 class="text-6xl md:text-5xl lg:text-5xl font-bold text-center leading-[3rem] mb-2 drop-shadow-glow">
-        <span class="animate-fractal">FRACTAL</span> <span class="animate-county">COUNTY</span>
-      </h1>
-      <h2 class="text-2xl md:text-3xl lg:text-3xl mt-0 mb-10 leading-2 text-center animate-subtitle drop-shadow-glow">Link Directory</h2>
-      <div class="button-list inline-flex flex-col">
+  <main class="main p-12">
+    <section class="content-container flex flex-col items-center justify-center safe-area space-y-16">
+      <div class="header-container space-y-2">
+        <h1 class="text-6xl font-bold text-center drop-shadow-glow">
+          <span class="animate-fractal">FRACTAL</span> <span class="animate-county">COUNTY</span>
+        </h1>
+        <h2 class="text-2xl sm:text-4xl text-center animate-subtitle drop-shadow-glow">Link Directory</h2>
+      </div>
+      <div class="button-list inline-flex flex-col space-y-5">
         <ButtonComponent v-for="link in YamlContent.links" :key="link.name" 
             :name="link.name" :url="link.url" />
+      </div>
+      <div class="icon-list flex space-x-8">
+        <IconComponent v-for="icon in YamlContent.icons" :key="icon.name" 
+          :name="icon.name" :url="icon.url" :path="icon.path" />
       </div>
     </section>
   </main>
   <div class="bg bg-gradient-to-t from-stone-900 from-5% via-stone-900 via-5% to-neutral-950 z-5 opacity-10"></div>
   <div class="bg bg-gradient-to-t from-stone-900 from-5% via-stone-900 via-5% to-neutral-950 -z-10 opacity-100"></div>
 </template>
-
 
 <style>
 html, body {
