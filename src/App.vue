@@ -11,7 +11,7 @@ import YamlContent from './assets/defaults.yml';
     <GrainEffect /> 
   </header>
   <main class="main">
-    <section class="content-container flex flex-col items-center justify-center safe-area space-y-16">
+    <section class="content-container flex flex-col items-center justify-center safe-area space-y-10">
       <div class="header-container space-y-2">
         <h1 class="text-6xl font-bold text-center drop-shadow-glow">
           <span class="animate-fractal">FRACTAL</span> <span class="animate-county">COUNTY</span>
@@ -79,7 +79,7 @@ html, body {
 .content-container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 2rem;
 }
 
 @keyframes wiggle-fractal {
