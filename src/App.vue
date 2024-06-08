@@ -50,8 +50,8 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: env(safe-area-inset-top, 40px);  /* Considers top bar adjustment */
-  padding-bottom: env(safe-area-inset-bottom, 40px);  /* Considers bottom bar adjustment */
+  padding-top: env(safe-area-inset-top, 30px);  /* Considers top bar adjustment */
+  padding-bottom: env(safe-area-inset-bottom, 30px);  /* Considers bottom bar adjustment */
 }
 
 .bg {
